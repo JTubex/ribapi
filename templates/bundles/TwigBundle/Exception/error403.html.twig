@@ -4,4 +4,5 @@
 
 {% block body %}
     {{ 'error.403.description'|trans }}
+    <a href="{{ path('index') }}">{{ 'error.403.back_to_homepage'|trans }}</a>
 {% endblock %}
