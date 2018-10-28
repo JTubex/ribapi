@@ -1,0 +1,10 @@
+error:
+    general:
+        title: 'Er is iets foutgelopen'
+        description: 'Er is iets foutgelopen. Probeer het later opnieuw'
+    403:
+        title: 'Verboden toegang'
+        description: 'U hebt geen toegang tot deze pagina.'
+    404:
+        title: 'Pagina niet gevonden.'
+        description: 'Deze pagina is niet gevonden of bestaat niet.'
