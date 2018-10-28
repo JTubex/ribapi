@@ -2,9 +2,12 @@ error:
     general:
         title: 'Er is iets foutgelopen'
         description: 'Er is iets foutgelopen. Probeer het later opnieuw'
+        back_to_homepage: 'Terug naar de homepage'
     403:
         title: 'Verboden toegang'
         description: 'U hebt geen toegang tot deze pagina.'
+        back_to_homepage: 'Terug naar de homepage'
     404:
         title: 'Pagina niet gevonden.'
         description: 'Deze pagina is niet gevonden of bestaat niet.'
+        back_to_homepage: 'Terug naar de homepage'
