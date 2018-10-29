@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}{% endblock %}</title>
-        {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('build/app.css') }}">
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}
-            <script src="{{ asset('build/app.js') }}"></script>
-        {% endblock %}
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{% endblock %}</title>
+  {% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+  {% endblock %}
+</head>
+<body class="app header-fixed">
+<header class="app-header navbar">
+  <a class="navbar-brand" href="{{ path('index') }}">
+    <img class="navbar-brand-full" src="img/brand/logo.svg" width="89"
+         height="25" alt="CoreUI Logo">
+    <img class="navbar-brand-minimized" src="img/brand/sygnet.svg" width="30"
+         height="30" alt="CoreUI Logo">
+  </a>
+  <ul class="nav navbar-nav d-md-down-none">
+    <li class="nav-item px-3">
+      <a class="nav-link" href="{{ path('index') }}">Home</a>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav ml-auto">
+    <li class="nav-item dropdown d-md-down-none">
+    </li>
+  </ul>
+</header>
+<div class="app-body">
+  <main class="main">
+    {% block breadcrumb %}{% endblock %}
+    <div class="container-fluid">
+      {% block content %}{% endblock %}
+    </div>
+  </main>
+</div>
+<footer class="app-footer">
+  <div>
+    <span>© {{ 'now'|date('Y') }} {{ site_name }}</span>
+  </div>
+</footer>
+{% block javascripts %}
+  <script src="{{ asset('build/app.js') }}"></script>
+{% endblock %}
+</body>
 </html>
