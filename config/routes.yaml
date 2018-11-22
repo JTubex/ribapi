@@ -1,3 +1,9 @@
 index:
     path: /
     controller: App\Controller\DefaultController:index
+led_on:
+    path: /led/on
+    controller: App\Controller\DefaultController:ledOn
+led_off:
+    path: /led/off
+    controller: App\Controller\DefaultController:ledOff

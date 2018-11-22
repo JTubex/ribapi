@@ -1,5 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-<div>Homepage</div>
+{% block content %}
+    <div class="mt-4 animated fadeIn">
+        <div class="card">
+            <div class="card-header">
+                <strong>Led</strong>
+            </div>
+            <div class="card-body">
+                <p><a href="{{ path('led_on') }}" class="text-success">Turn on led</a></p>
+                <p><a href="{{ path('led_off') }}" class="text-danger">Turn off led</a></p>
+            </div>
+        </div>
+    </div>
 {% endblock %}
